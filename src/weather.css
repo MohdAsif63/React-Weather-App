@@ -1,0 +1,18 @@
+.card {
+          width: 400px;
+          border-radius: 10px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+          transform: scale(1.05);
+          box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+        }
+.h1:hover{
+         
+                    font-size: 3.5rem; 
+                   transform: scale(1);
+                    color: #00BFFF;
+                    transition: all 0.3s ease-in-out;
+                  
+}
