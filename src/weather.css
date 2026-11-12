@@ -1,18 +1,86 @@
-.card {
-          width: 400px;
-          border-radius: 10px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
 
-        .card:hover {
-          transform: scale(1.05);
-          box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
-        }
-.h1:hover{
-         
-                    font-size: 3.5rem; 
-                   transform: scale(1);
-                    color: #00BFFF;
-                    transition: all 0.3s ease-in-out;
-                  
+/* Main Container */
+.weather-app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Weather Card */
+.card {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+  margin: -20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Hover */
+.h1:hover {
+  font-size: 3.5rem;
+  color: #00BFFF;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sunny */
+.weather-app.clear,
+.weather-app.clear-sky {
+  background-image: url("./assets/sunny.jpg.png");
+}
+
+/* Cloudy */
+.weather-app.clouds,
+.weather-app.few-clouds,
+.weather-app.scattered-clouds,
+.weather-app.broken-clouds,
+.weather-app.overcast-clouds {
+  background-image: url("./assets/clouds.png");
+}
+
+/* Rainy */
+.weather-app.rain,
+.weather-app.drizzle {
+  background-image: url("./assets/rain.png");
+}
+
+/* Thunderstorm */
+.weather-app.thunderstorm {
+  background-image: url("./assets/thunderstorm.png");
+}
+
+/* Snowy */
+.weather-app.snow {
+  background-image: url("./assets/snow.png");
+}
+
+/* Haze / Fog */
+.weather-app.haze,
+.weather-app.mist,
+.weather-app.fog {
+  background-image: url("./assets/haze.png");
+}
+
+/* Page Setup */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+#root {
+  max-width: none;
+  padding: 0;
 }

@@ -1,13 +1,11 @@
 import { useState } from "react";
 import InfoBox from "./InfoBox";
 import SearchBox from "./SearchBox";
-import "./weather.css";
-
 
 export default function WeatherApp() {
   const [weatherInfo, setWeatherInfo] = useState({
-    city: "Kanpur",
-    feelsLike: 24.84, 
+    city: "Agra",
+    feelsLike: 24.84,
     temp: 25.05,
     tempMin: 25.05,
     tempMax: 25.05,
@@ -19,11 +17,26 @@ export default function WeatherApp() {
     setWeatherInfo(newInfo);
   };
 
+  const getBackground = () => {
+  const weather = weatherInfo.weather;
+
+  if (weather === "clear") return "sunny";
+  if (weather === "clouds") return "cloudy";
+  if (weather === "rain" || weather === "drizzle") return "rainy";
+  if (weather === "snow") return "snow";
+  if (weather === "thunderstorm") return "thunderstorm";
+
+  return "haze";
+};
+
   return (
-    <div style={{ textAlign: "center" }}>
-     <h1 className="h1" style={{fontFamily:"Merriweather"}}>Weather App</h1>
-      <SearchBox updateInfo={updateInfo} />
-      <InfoBox info={weatherInfo} />
+    <div className={`weather-app ${getBackground()}`}>
+      <h1 className="h1">Weather App</h1>
+
+    <div className="weather-dashboard">
+  <SearchBox updateInfo={updateInfo} />
+  <InfoBox info={weatherInfo} />
+</div>
     </div>
   );
 }

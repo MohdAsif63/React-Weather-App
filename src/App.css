@@ -1,42 +1,205 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+.weather-app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.weather-app.sunny {
+  background-image: url("./assets/sunny.jpg.png");
+}
+
+.weather-app.cloudy {
+  background-image: url("./assets/clouds.png");
+}
+
+.weather-app.rainy {
+  background-image: url("./assets/rain.png");
+}
+
+.weather-app.snow {
+  background-image: url("./assets/snow.png");
+}
+
+.weather-app.thunderstorm {
+  background-image: url("./assets/thunderstorm.png");
+}
+
+.weather-app.haze {
+  background-image: url("./assets/haze.png");
+}
+
+.weather-dashboard {
+  width: 450px;
+  max-width: 90%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  color: white;
+}
+
+.SearchBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.SearchBox form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.SearchBox .MuiTextField-root {
+  flex: 1;
+}
+
+.SearchBox .MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border-radius: 8px;
+}
+
+.SearchBox .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.SearchBox .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.SearchBox .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+  border-width: 1px;
+}
+
+.SearchBox .MuiButton-root {
+  padding: 12px 20px;
+  background: white;
+  color: #222;
+}
+
+.SearchBox .MuiButton-root:hover {
+  background: #ddd;
+}
+
+.weather-info {
+  width: 100%;
+  padding: 15px;
+  color: white;
+}
+
+.current-weather {
+  margin: 20px 0;
+}
+
+.city-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.temperature {
+  font-size: 38px;
+  margin-bottom: 5px;
+}
+
+.weather-condition {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.feels-like {
+  font-size: 14px;
+  color: #ddd;
+  margin-top: 5px;
+}
+
+.weather-details {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.detail-item {
+  flex: 1;
+  padding: 15px 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.detail-item svg {
+  font-size: 25px;
+  margin-bottom: 8px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.detail-item span {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.detail-item h3 {
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  .weather-dashboard {
+    width: 90%;
+  }
+
+  .h1 {
+    font-size: 28px;
   }
 }
 
-.card {
-  padding: 2em;
-}
+@media (max-width: 480px) {
+  .weather-app {
+    padding: 20px 10px;
+  }
 
-.read-the-docs {
-  color: #888;
+  .h1 {
+    font-size: 25px;
+  }
+
+  .weather-dashboard {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .SearchBox form {
+    gap: 8px;
+  }
+
+  .SearchBox .MuiButton-root {
+    padding: 12px;
+  }
+
+  .temperature {
+    font-size: 32px;
+  }
+
+  .weather-details {
+    gap: 8px;
+  }
+
+  .detail-item {
+    padding: 12px 5px;
+  }
+
+  .detail-item h3 {
+    font-size: 14px;
+  }
 }
