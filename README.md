@@ -6,6 +6,10 @@ A responsive Weather Application built using React.js and Material UI. Users can
 
 [View Weather App](https://mohd-asif-weather-app.netlify.app/)
 
+## Project Screenshot
+
+![Weather App](weather-app.png)
+
 ## Features
 
 - Search weather by city name
