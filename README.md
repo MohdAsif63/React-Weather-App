@@ -2,6 +2,10 @@
 
 A responsive Weather Application built using React.js and Material UI. Users can search for any city and view its current weather information with dynamic backgrounds based on weather conditions.
 
+## Live Demo
+
+[View Weather App](https://mohd-asif-weather-app.netlify.app/)
+
 ## Features
 
 - Search weather by city name
@@ -27,13 +31,13 @@ A responsive Weather Application built using React.js and Material UI. Users can
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_GITHUB_REPOSITORY_URL
+   git clone https://github.com/MohdAsif63/React-Weather-App.git
    ```
 
 2. Navigate to the project folder:
 
    ```bash
-   cd mini-project-react
+   cd React-Weather-App
    ```
 
 3. Install dependencies:
@@ -57,4 +61,3 @@ Weather data is fetched using the OpenWeatherMap API.
 **Mohd Asif**
 
 - GitHub: https://github.com/MohdAsif63
-- Portfolio: https://mohdasiftechy.netlify.app
